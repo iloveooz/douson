@@ -21,9 +21,15 @@
     <ClCompile Include="Critter.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
+    <ClCompile Include="CritterFarm.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Critter.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="CritterFarm.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
   </ItemGroup>

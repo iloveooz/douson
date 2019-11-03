@@ -1,10 +1,15 @@
 #include <iostream>
 #include "Critter.h"
+#include "CritterFarm.h"
 
 int Critter::s_Total = 0;
 
 int main() {
-	Critter crit;
+	
+	Farm myFarm(3);
+
+	Critter crit("Poochie");
+
 	crit.Talk();
 	int choice;
 	do {
@@ -30,6 +35,18 @@ int main() {
 		}
 	} while (choice != 0);
 	
+	std::cout << "My critter's name is " << crit.GetName() << std::endl;
+
+	std::cout << "\nAdding three critters to the farm.\n";
+	
+	myFarm.Add(Critter("Moe"));
+	myFarm.Add(Critter("Larry"));
+	myFarm.Add(Critter("Curly"));
+	
+	std::cout << "\nCalling Roll... \n";
+
+	myFarm.RollCall();
+
 	system("pause");
 	return 0;
 }

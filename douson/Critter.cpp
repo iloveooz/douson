@@ -1,10 +1,19 @@
 #include <iostream>
 #include "Critter.h"
 
-Critter::Critter(int hunger, int boredom) {
+Critter::Critter(int hunger, int boredom, const std::string& name) {
 	std::cout << "A new critter has been born!" << std::endl;
 	m_Hunger = hunger;
 	m_Boredom = boredom;
+	m_Name = name;
+	++s_Total;
+}
+
+Critter::Critter(const std::string& name) {
+	std::cout << "A new critter has been born!" << std::endl;
+	m_Hunger = 0;
+	m_Boredom = 0;
+	m_Name = name;
 	++s_Total;
 }
 
@@ -27,6 +36,10 @@ void Critter::SetHunger(int hunger) {
 
 int Critter::GetTotal() {
 	return s_Total;
+}
+
+std::string Critter::GetName() const {
+	return m_Name;
 }
 
 int Critter::GetMood() const {

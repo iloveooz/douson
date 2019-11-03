@@ -89,3 +89,16 @@ void Critter::Play(int fun) {
 	}
 	PassTime();
 }
+
+void Peek(const Critter& aCritter);
+std::ostream& operator << (std::ostream& os, const Critter& aCritter);
+
+void Peek(const Critter& aCritter) {
+	std::cout << aCritter.m_Name << std::endl;
+}
+
+std::ostream& operator<<(std::ostream& os, const Critter& aCritter) {
+	os << "Critter Object - ";
+	os << "m_Name: " << aCritter.m_Name;
+	return os;
+}

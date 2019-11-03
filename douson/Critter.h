@@ -1,6 +1,7 @@
 #pragma once
 class Critter {
-	
+	friend void Peek(const Critter& aCritter);
+	friend std::ostream& operator << (std::ostream& os, const Critter& aCritter);
 public:
 	Critter(int hunger = 0, int boredom = 0, const std::string& name = "");
 	Critter(const std::string& name = "");

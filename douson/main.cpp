@@ -7,6 +7,17 @@ int main() {
 
 	crit1.Greet();
 	crit2.Greet();
+
+	std::cout << "Calling GetHunger(): " << crit1.GetHunger() << "\n\n";
+	
+	std::cout << "Calling SetHunger() with -1.\n";
+	crit1.SetHunger(-1);
+	
+	std::cout << "Calling SetHunger() with 9.\n";
+	crit1.SetHunger(9);
+	
+	std::cout << "Calling GetHunger(): " << crit1.GetHunger() << "\n\n";
+	
 	system("pause");
 	return 0;
 }

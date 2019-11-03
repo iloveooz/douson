@@ -6,7 +6,9 @@ public:
 
 	int GetHunger() const;
 	void SetHunger(int hunger);
-	
+
+	static int GetTotal();
+	static int s_Total;
 private:
 	int m_Hunger;
 };

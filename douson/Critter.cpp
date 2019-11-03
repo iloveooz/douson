@@ -4,6 +4,7 @@
 Critter::Critter(int hunger) {
 	std::cout << "A new critter has been born!" << std::endl;
 	m_Hunger = hunger;
+	++s_Total;
 }
 
 void Critter::Greet() {
@@ -21,4 +22,8 @@ void Critter::SetHunger(int hunger) {
 	else {
 		m_Hunger = hunger;
 	}
+}
+
+int Critter::GetTotal() {
+	return s_Total;
 }

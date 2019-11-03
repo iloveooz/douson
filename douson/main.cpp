@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Critter.h"
 
+int Critter::s_Total = 0;
+
 int main() {
 	Critter crit1(9);
 	Critter crit2(3);
@@ -17,6 +19,8 @@ int main() {
 	crit1.SetHunger(9);
 	
 	std::cout << "Calling GetHunger(): " << crit1.GetHunger() << "\n\n";
+
+	std::cout << "Critter::GetTotal = " << Critter::GetTotal() << '\n';
 	
 	system("pause");
 	return 0;
